@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: pod
 metadata:
-  name: pod
+  name: nginx
 spec:
   containers:
     - name: nginx
