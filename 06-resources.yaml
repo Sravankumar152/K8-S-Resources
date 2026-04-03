@@ -3,8 +3,8 @@ kind: Pod
 metadata:
   name: resource
   labels:
-  - name: resource
-  - environment: dev
+    name: resource
+    environment: dev
 spec:
   containers:
   - name: nginx
