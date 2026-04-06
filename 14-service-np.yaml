@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: demo-nodeport
+  name: nginx-node
   namespace: roboshop
 spec:
   type: NodePort
   selector:
     project: roboshop
     environment: dev
-  port:
-  - protocol: TCP
-    port: 80 #serviceport
-    targetPort: 80  #containerport
+  ports:
+  - protocol:
+    port: 80
+    targetPort: 80
