@@ -11,11 +11,10 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-         labels:
-          project: roboshop
-          environment: dev
-          tier: frontend
-          component: frontend
+      project: roboshop
+      environment: dev
+      tier: frontend
+      component: frontend
   template:
     metadata:
       labels:
@@ -23,8 +22,7 @@ spec:
         environment: dev
         tier: frontend
         component: frontend
-
     spec:
       containers:
-      - name: nginx
-        image: nginx
+        - name: nginx
+          image: nginx
