@@ -6,7 +6,7 @@ metadata:
     project: roboshop
     environment: dev
     component: frontend
-  annotaions:
+  annotations:
     kubernetes.io/change-cause: "going to 1.29"
 spec:
   replicas: 3
