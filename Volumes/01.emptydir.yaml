@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-pd
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+    volumeMounts:
+    - mountPath: /var/log/nginx
+      name: cache-volume
+  - image: alma-linux
+    name: alma-linux
+    volumeMounts:
+    - mountPath: /mnt/nginx-logs
+      name: nignx-logs
+      readOnly: true
+  volumes:
+  - name: nignx-logs
+    emptyDir:
+      sizeLimit: 500Mi
