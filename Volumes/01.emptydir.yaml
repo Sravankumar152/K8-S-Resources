@@ -4,18 +4,20 @@ metadata:
   name: test-pd
 spec:
   containers:
-  - image: nginx
-    name: nginx
-    volumeMounts:
-    - mountPath: /var/log/nginx
+    - image: nginx
       name: nginx
-  - image: alma-linux
-    name: alma-linux
-    volumeMounts:
-    - mountPath: /mnt/nginx-logs
-      name: nignx-logs
-      readOnly: true
+      volumeMounts:
+        - mountPath: /var/log/nginx
+          name: nginx-logs          
+
+    - image: almalinux              
+      name: alma-linux
+      volumeMounts:
+        - mountPath: /mnt/nginx-logs
+          name: nginx-logs           
+          readOnly: true
+
   volumes:
-  - name: nignx-logs
-    emptyDir:
-      sizeLimit: 500Mi
+    - name: nginx-logs               
+      emptyDir:
+        sizeLimit: 500Mi
