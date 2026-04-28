@@ -8,7 +8,7 @@ spec:
     name: nginx
     volumeMounts:
     - mountPath: /var/log/nginx
-      name: cache-volume
+      name: nginx
   - image: alma-linux
     name: alma-linux
     volumeMounts:
